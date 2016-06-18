@@ -1,0 +1,160 @@
+// =============================================================================
+// AUTHOR PAGE STYLES
+// =============================================================================
+
+
+// General
+// -----------------------------------------------------------------------------
+.about-content {
+  padding-top: $distance * 3;
+  position: relative;
+  text-align: center;
+
+  @include mq(desktop) {
+    padding: $distance * 3 $distance * 1.5 0;
+  }
+
+  @include mq(mobile) {
+    padding: 0 $distance * 1.5;
+  }
+
+  > .post {
+    @extend %thought;
+    margin-left: 0;
+    text-align: left;
+    width: 66.66%;
+
+    @include mq(mobile) {
+      width: 100%;
+    }
+  }
+
+  .menu-box {
+    position: absolute;
+    right: 0;
+    top: $distance * 5;
+
+    &.fixed {
+      position: fixed;
+      right: calc(50% - #{$site-box / 2});
+      top: $distance * 3;
+
+      @include mq(desktop) {
+        right: 0;
+      }
+    }
+  }
+}
+// -----------------------------------------------------------------------------
+
+
+// Author Profile
+// -----------------------------------------------------------------------------
+.author-profile {
+  padding-bottom: $distance * 3;
+  position: relative;
+// Author Image
+// -----------------------------------------------------------------------------
+  .author-image {
+    animation: blured-out .999s ease-out forwards; // Blur out animation
+    font-size: 0;
+    height: 66.66vw;
+    margin-left: 0;
+    max-height: $post-box;
+    max-width: $post-box;
+    overflow: hidden;
+    width: 66.66vw;
+    z-index: -1;
+
+    @include mq(hybrid) {
+      margin-bottom: -$distance * 1.5;
+      margin-left: $distance * 1.5;
+      z-index: 1;
+    }
+
+    > .img {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: block;
+      font-size: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+// -----------------------------------------------------------------------------
+
+
+// Author Block
+// -----------------------------------------------------------------------------
+  .author-block {
+    background-image: url('../img/dots-texture.png');
+    bottom: 0;
+    height: 33.33vw;
+    margin-right: 0;
+    max-width: 50%;
+    max-height: $post-box / 2;
+    padding-left: 16.66%;
+    position: absolute;
+    right: 0;
+    width: 50vw;
+    z-index: 1;
+
+    @include mq(hybrid) {
+      height: auto;
+      max-height: none;
+      max-width: none;
+      padding: $distance * 3 $distance * 1.5;
+      position: relative;
+      width: 100%;
+      z-index: -1;
+    }
+
+    > section {
+      background-color: $white;
+      bottom: $distance * 3;
+      padding: $distance * 2;
+      position: absolute;
+      right: 0;
+      width: calc(66.66% - #{$distance * 3});
+
+      @include mq(hybrid) {
+        position: static;
+        width: 100%;
+      }
+
+      span {
+        font-size: $fh3;
+        font-weight: $regular;
+        line-height: $line-height;
+      }
+
+      h3 {
+        font-size: $fh2;
+        font-weight: $regular;
+        line-height: $line-height;
+      }
+
+      p {
+        line-height: $line-height-big;
+        margin: $distance auto;
+      }
+
+      a {
+        color: $primary;
+        font-size: $fsmall;
+        line-height: $line-height-big * 2;
+
+        &:hover {
+          border-bottom: 1px dotted $white;
+        }
+
+        &::after {
+          content: '»';
+          margin-left: $distance;
+        }
+      }
+    }
+  }
+}
+// -----------------------------------------------------------------------------

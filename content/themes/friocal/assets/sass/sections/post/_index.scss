@@ -1,0 +1,319 @@
+// =============================================================================
+// THOUGHT POST STYLES
+// =============================================================================
+
+
+// General
+// -----------------------------------------------------------------------------
+.post-template:not(.page-template) {
+// Post Heading
+// -----------------------------------------------------------------------------
+  .post-heading {
+    max-width: $site-box;
+    overflow: hidden;
+    margin-top: $distance * 3;
+    min-height: auto;
+    position: relative;
+
+    @include mq(mobile) {
+      margin-top: $distance * 1.5;
+    }
+  }
+
+  .main-info {
+    height: calc(100vh - #{$header-height});
+    margin-left: 0;
+    max-height: $post-heading-height + $distance * 3;
+    min-height: 500px;
+    position: relative;
+    width: 66.66%;
+
+    @include mq(mobile) {
+      height: auto;
+      max-height: none;
+      min-height: 0;
+      padding: $distance * 1.5;
+      padding-bottom: $distance * 3;
+      width: 100%;
+    }
+
+    &::before {
+      background-image: url('../img/dots-texture.png');
+      bottom: 0;
+      content: '';
+      height: 33.33%;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    .post-date {
+      background-color: $black;
+      color: $white;
+      font-size: $fsmall;
+      line-height: $line-height;
+      padding: 0 $distance;
+
+      &::after {
+        content: '»';
+        margin-left: $distance / 2;
+      }
+    }
+
+    .post-title {
+      font-size: $fh0;
+      font-weight: $medium;
+      line-height: $line-height;
+      margin-top: $distance * 2;
+
+      @include mq(desktop) {
+        padding-left: $distance * 1.5;
+      }
+
+      @include mq(mobile) {
+        font-size: 13vw;
+        padding-left: 0;
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    .post-excerpt {
+      background-color: $white;
+      bottom: $distance * 6;
+      left: $distance * 3;
+      padding: $distance * 2;
+      position: absolute;
+      width: 50%;
+      z-index: 1;
+
+      @include mq(mobile) {
+        bottom: auto;
+        left: auto;
+        position: relative;
+        width: 100%;
+      }
+
+      &::after {
+        content: '...';
+        margin-left: $distance / 2;
+      }
+    }
+
+    .post-cap {
+      bottom: -8rem;
+      color: $primary;
+      font-size: 0;
+      font-weight: $light;
+      line-height: 1em;
+      position: absolute;
+      transition: color 250ms ease-out;
+
+      &::first-letter {
+        font-size: 41rem;
+      }
+    }
+  }
+// -----------------------------------------------------------------------------
+
+
+// Cover Image
+// -----------------------------------------------------------------------------
+  .main-header {
+    height: calc(100vh - #{$header-height + $distance * 6});
+    max-height: $post-heading-height;
+    min-height: 500px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    z-index: -1;
+
+    @include mq(mobile) {
+      height: 50vh;
+      max-height: 50vh;
+      min-height: 0;
+      position: static;
+      width: calc(100% - #{$distance * 3});
+    }
+
+    .post-cover {
+      animation: blured-out .999s ease-out forwards; // Blur out animation
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: calc(100vh - #{$header-height + $distance * 9});
+      max-height: $post-heading-height;
+      min-height: 500px;
+      width: 100%;
+
+      @include mq(mobile) {
+        height: 100%;
+        max-height: 100%;
+        min-height: 0;
+      }
+    }
+  }
+// -----------------------------------------------------------------------------
+
+
+// Page styles
+// -----------------------------------------------------------------------------
+  .site-wrapper {
+    min-height: $post-height;
+    padding: 0;
+  }
+
+  .content {
+    animation: op-in .999s ease-out forwards; // Opacity In animation
+    max-width: $site-box;
+    min-height: $post-box;
+    padding-bottom: $distance * 5;
+    padding-top: $distance * 3;
+    position: relative;
+
+    @include mq(desktop) {
+      padding: $distance * 3 $distance * 1.5 $distance * 5;
+    }
+
+    @include mq(mobile) {
+      padding: $distance * 3 0 $distance * 5;
+    }
+
+    > aside {
+      position: absolute;
+      right: 0;
+      top: $distance * 8;
+
+      @include mq(mobile) {
+        position: static;
+      }
+
+      &.fixed {
+        position: fixed;
+        right: calc(50% - #{$site-box / 2});
+        top: $distance * 3;
+
+        @include mq(desktop) {
+          right: 0;
+        }
+
+        @include mq(mobile) {
+          position: static;
+        }
+      }
+    }
+  }
+// -----------------------------------------------------------------------------
+
+
+// Thought Post style
+// -----------------------------------------------------------------------------
+  article {
+    @extend %thought;
+    margin-left: 0;
+    text-align: left;
+    width: 66.66%;
+
+    @include mq(mobile) {
+      padding: 0 $distance * 1.5;
+      width: 100%;
+    }
+
+    .post-header {
+      text-align: left;
+
+      .post-date {
+        background-color: $black;
+        color: $white;
+        font-size: $fsmall;
+        line-height: $line-height;
+        padding: 0 $distance;
+
+        &::after {
+          content: '»';
+          margin-left: $distance / 2;
+        }
+      }
+
+      .post-title {
+        font-size: $fh0;
+        font-weight: $medium;
+      }
+    }
+  }
+// -----------------------------------------------------------------------------
+
+
+// Post Footer
+// -----------------------------------------------------------------------------
+  .post-footer {
+    @include mq(desktop) {
+      padding: 0 $distance * 1.5;
+    }
+  }
+
+  .author,
+  .share {
+    margin-top: $distance * 3;
+    width: 100%;
+
+    @include mq(mobile) {
+      @include inline-block;
+      margin-top: 0;
+      width: 50%;
+    }
+  }
+
+// Author ----------------------------------------------------------------------
+  .author {
+    text-align: right;
+
+    @include mq(mobile) {
+      text-align: left;
+    }
+
+    .author-image {
+      @extend %auth-image;
+      @include inline-block;
+    }
+
+    .author-name {
+      @extend %auth-name;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: left;
+    }
+  }
+// -----------------------------------------------------------------------------
+
+
+// Share -----------------------------------------------------------------------
+  .share {
+    text-align: right;
+
+    > span {
+      display: block;
+      font-size: $ftiny;
+      font-weight: $light;
+      line-height: $auth-image;
+      margin-right: $distance;
+
+      @include mq(mobile) {
+        display: block;
+        line-height: $auth-image / 2;
+      }
+    }
+
+    > a[class*='icon-'] { // scss-lint:disable QualifyingElement
+      @extend %social-icon;
+      margin-top: #{($auth-image - $icon) / 2};
+
+      @include mq(mobile) {
+        margin-top: 0;
+      }
+    }
+  }
+// -----------------------------------------------------------------------------
+}
+// -----------------------------------------------------------------------------

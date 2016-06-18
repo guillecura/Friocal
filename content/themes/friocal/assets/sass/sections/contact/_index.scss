@@ -1,0 +1,72 @@
+// =============================================================================
+// CONTACT PAGE STYLES
+// =============================================================================
+
+
+// General
+// -----------------------------------------------------------------------------
+.contact-head {
+  height: $tag-head;
+  min-height: $logo;
+  position: relative;
+  width: 100%;
+
+  > .page-logo {
+    animation: item-in .666s ease-out forwards;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: $logo;
+    margin: $distance * 3 auto;
+    width: $logo;
+  }
+}
+
+.contact-content {
+  animation: op-in .999s ease-out forwards; // Opacity In animation
+  min-height: $contact-height;
+  padding: $distance * 1.5 0;
+
+  @include mq(mobile) {
+    padding-top: 0;
+  }
+
+
+// Content box -----------------------------------------------------------------
+  > article {
+    max-width: $post-box;
+    padding: $distance * 3 0;
+    text-align: center;
+    width: 100%;
+
+    @include mq(mobile) {
+      padding: $distance $distance * 1.5;
+    }
+
+    .button {
+      color: inherit;
+      margin: $distance * 2 auto;
+    }
+
+    span {
+      font-size: $fsmall;
+    }
+  }
+// -----------------------------------------------------------------------------
+
+
+// Title
+  .post-title {
+    @include mq(mobile) {
+      font-size: $fh2;
+    }
+  }
+
+// Social Links ----------------------------------------------------------------
+  .social-links {
+    margin-top: $distance;
+    padding-left: 0;
+  }
+// -----------------------------------------------------------------------------
+}
+// -----------------------------------------------------------------------------

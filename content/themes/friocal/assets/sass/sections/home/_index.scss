@@ -1,0 +1,102 @@
+// =============================================================================
+// HOME PAGE STYLES
+// =============================================================================
+
+
+// General
+// -----------------------------------------------------------------------------
+.home-content {
+  animation: op-in .999s ease-out forwards; // Opacity In animation
+  min-height: $section-height;
+  position: relative;
+  margin-top: calc(#{$fh1 * 3} + #{$distance * 3});
+
+  @include mq(mobile) {
+    margin-top: calc(#{$fh2 * 6} + #{$distance * 3});
+  }
+
+  // Dotted background
+  &::before {
+    background-image: url('../img/dots-texture.png');
+    content: '';
+    height: calc(#{$fh1 * 5} + #{$distance * 15});
+    left: 0;
+    position: absolute;
+    top: calc((#{$fh1 * 3} + #{$distance * 3}) * -1);
+    width: 66.66%;
+    z-index: -1;
+
+    @include mq(mobile) {
+      top: calc((#{$fh2 * 6} + #{$distance * 3}) * -1);
+    }
+  }
+}
+
+.home-cases + .home-posts {
+  margin-top: $distance * 5;
+}
+
+.home-cases,
+.home-posts {
+  min-height: 50vh;
+}
+
+.home-posts > .thought {
+  width: 66.66%;
+
+  @include mq(mobile) {
+    padding: $distance * 1.5;
+    width: 100%;
+  }
+}
+
+
+// Menu ------------------------------------------------------------------------
+.menu-widget {
+  padding: $distance * 2 0;
+  position: absolute;
+  right: 0;
+  width: 50%;
+  z-index: $z-top;
+
+  @include mq(mobile) {
+    padding: 0 $distance * 1.5;
+    width: 66.66%;
+  }
+
+  // Menu list
+  > .nav > ul {
+    list-style: none;
+    margin-right: 0;
+    padding: $distance * 3 $distance * 1.5 $distance * 3;
+    text-align: center;
+    width: 100%;
+
+    li {
+      font-size: $fh1 * 1.1;
+      font-weight: $bold;
+      line-height: $line-height;
+      text-align: left;
+      width: 66.66%;
+
+      @include mq(hybrid) {
+        font-size: $fh1;
+      }
+
+      @include mq(mobile) {
+        font-size: $fh2;
+        width: 100%;
+      }
+    }
+
+    a {
+      transition: text-shadow 50ms;
+
+      &:hover {
+        border: 0;
+        text-shadow: $border * 1.5 $border * 1.5 $primary;
+      }
+    }
+  }
+}
+// -----------------------------------------------------------------------------

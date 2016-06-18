@@ -1,0 +1,56 @@
+// =============================================================================
+// HAMBURGER MENU ICON
+// Animations on mobile should have Important rule to override the default ones.
+// =============================================================================
+
+
+// No Meat Hamburger Icon SVG
+// -----------------------------------------------------------------------------
+.menu-box {
+  animation: none!important;
+  border: $line * 2 solid $primary;
+  max-width: calc(33.33vw - #{$distance * 2});
+  padding: $distance * 1.5;
+  width: 300px;
+  transition: border-color 250ms ease-out;
+
+  @include mq(mobile) {
+    display: none;
+  }
+
+  @mixin alignment($pos) {
+    margin-#{$pos}: 0;
+    text-align: #{$pos};
+
+    li:hover {
+      color: $primary-dark;
+      padding-#{$pos}: $distance;
+    }
+  }
+
+  &.left {
+    @include alignment(left);
+  }
+
+  &.right {
+    @include alignment(right);
+  }
+
+  li {
+    color: $primary;
+    font-size: $fh2;
+    font-weight: $light;
+    line-height: $line-height;
+    list-style: none;
+    transition: color 250ms ease-out, padding 150ms;
+
+    &.nav-current {
+      font-weight: $bold;
+    }
+
+    > a:hover {
+      border: 0;
+    }
+  }
+}
+// -----------------------------------------------------------------------------

@@ -1,0 +1,83 @@
+// =============================================================================
+// PAGE MAIN SECTION HEADER
+// =============================================================================
+
+
+// Define sizes
+// -----------------------------------------------------------------------------
+.hero-section {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: $site-height;
+  max-height: $site-box / 1.2;
+  min-height: $hero-min-height;
+  position: relative;
+
+  &.no-cover {background-color: $white;}
+
+  &.hero-section:not(.no-cover) {
+    animation: item-in .666s ease-out forwards; // Slide In animation
+  }
+}
+// -----------------------------------------------------------------------------
+
+
+// Main Header
+// -----------------------------------------------------------------------------
+.main-header-content {
+  @include vertical-center;
+  text-align: center;
+  width: 100%;
+
+  > * {
+    animation: item-in .666s ease-out forwards; // Slide In animation
+  }
+
+  > .page-logo {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: $hero-logo;
+    margin-bottom: $distance * 4;
+    width: $hero-logo;
+  }
+
+  > .page-description {
+    font-weight: $regular;
+  }
+}
+// -----------------------------------------------------------------------------
+
+
+// Tag & Contact header
+// -----------------------------------------------------------------------------
+.tag-head {
+  height: $tag-head;
+  min-height: $header-height * 1.5;
+  position: relative;
+  width: 100%;
+
+  &.no-cover {
+    height: 0;
+    min-height: 0;
+  }
+// -----------------------------------------------------------------------------
+
+
+// Page Description ------------------------------------------------------------
+  > .page-description {
+    @include vertical-center;
+    animation: item-in .666s ease-out forwards; // Slide In animation
+    font-weight: $regular;
+    line-height: $line-height;
+    text-align: center;
+    width: 100%;
+
+    @include mq(mobile) {
+      font-size: $fh5;
+    }
+  }
+// -----------------------------------------------------------------------------
+}
+// -----------------------------------------------------------------------------
