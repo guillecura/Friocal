@@ -7,9 +7,9 @@
 // -----------------------------------------------------------------------------
 .home-content {
   animation: op-in .999s ease-out forwards; // Opacity In animation
+  margin-top: calc(#{$fh1 * 3} + #{$distance * 3});
   min-height: $section-height;
   position: relative;
-  margin-top: calc(#{$fh1 * 3} + #{$distance * 3});
 
   @include mq(mobile) {
     margin-top: calc(#{$fh2 * 6} + #{$distance * 3});

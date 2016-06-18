@@ -1072,9 +1072,9 @@ h6 {
 
 .home-content {
   animation: op-in .999s ease-out forwards;
+  margin-top: calc(9rem + 30px);
   min-height: calc(100vh - 95px);
-  position: relative;
-  margin-top: calc(9rem + 30px); }
+  position: relative; }
   @media (max-width: 640px) {
     .home-content {
       margin-top: calc(12rem + 30px); } }
