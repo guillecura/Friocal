@@ -6,12 +6,12 @@
 // Main Palette
 // -----------------------------------------------------------------------------
 // Primary Color ---------------------------------------------------------------
-$primary:                 rgb(255, 0, 100);
+$primary:                 rgb(190, 0, 0);
 $primary-dark:            darken($primary, 10%);
 $primary-light:           lighten($primary, 10%);
 
 // Secondary Color -------------------------------------------------------------
-$secondary:               rgb(255, 102, 102);
+$secondary:               rgb(30, 28, 88);
 $secondary-dark:          darken($secondary, 10%);
 $secondary-light:         lighten($secondary, 10%);
 
@@ -26,13 +26,13 @@ $third-light:             lighten($third, 10%);
 // -----------------------------------------------------------------------------
 $white:                   rgb(255, 255, 255);
 
-$smoke:                   rgb(250, 250, 248);
+$smoke:                   rgb(246, 246, 246);
 $smoke-dark:              darken($smoke, 5%);
 
 $gray:                    rgb(153, 166, 176);
 $gray-dark:               darken($gray, 10%);
 
-$stone:                   rgb(76, 86, 94);
+$stone:                   rgb(193, 198, 202);
 $stone-light:             lighten($stone, 10%);
 $stone-dark:              darken($stone, 10%);
 

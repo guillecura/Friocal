@@ -9,6 +9,7 @@
 // -----------------------------------------------------------------------------
 body > nav {
   background-color: $white;
+  border-bottom: 1px solid $stone;
   color: $black;
   height: $menu-height;
   left: 0;
@@ -25,42 +26,36 @@ body > nav {
     position: absolute;
     right: 0;
     text-align: right;
-    top: $menu-height / 4; 
+    top: $menu-height / 4;
   }
 
 
 // Type & texts ----------------------------------------------------------------
   li {
+    border: 1px solid transparent;
+    color: $stone;
     display: inline-block;
     font-size: $fdef;
     font-weight: $bold;
     line-height: $menu-height / 2;
     list-style: none;
 
+    &:hover,
     &.nav-current {
-      border: 1px solid;
+      border-color: $black;
+      color: $black;
     }
 
+    + li {
+      margin-left: $distance;
+    }
 
     > a {
       display: block;
+      font-weight: $regular;
       padding-left: $distance;
       padding-right: $distance;
     }
   }
-// -----------------------------------------------------------------------------
-}
-// -----------------------------------------------------------------------------
-
-
-// If nav is opened
-// -----------------------------------------------------------------------------
-.nav-opened > .nav ul {
-  animation: menu-li-in .333s ease-out forwards;
-  pointer-events: all;
-}
-
-.nav-opened > .nav {
-  animation: menu-in .333s ease-out forwards;
 }
 // -----------------------------------------------------------------------------
