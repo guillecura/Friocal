@@ -7,14 +7,11 @@
 // -----------------------------------------------------------------------------
 // Nav block
 // -----------------------------------------------------------------------------
-body > .nav {
+body > nav {
   background-color: $white;
-  bottom: 0;
   color: $black;
   height: $menu-height;
   left: 0;
-  opacity: 0;
-  pointer-events: none;
   position: fixed;
   right: 0;
   top: 0;
@@ -22,63 +19,33 @@ body > .nav {
   z-index: $z-top + 1;
 
 
-// If nav is closed
-// -----------------------------------------------------------------------------
-  &.closed ul {
-    animation: menu-li-out .333s ease-in forwards;
-  }
-
-  &.closed {
-    animation: menu-out .333s ease-in forwards;
-  }
-// -----------------------------------------------------------------------------
-
-
 // Main content
 // -----------------------------------------------------------------------------
   > ul {
-    display: block;
-    left: 50%;
-    list-style: none;
-    max-width: $site-box;
-    padding: 0 $distance * 1.5;
     position: absolute;
+    right: 0;
     text-align: right;
-    top: 50%;
-    width: 100%;
-
-    @include mq(desktop) {
-      padding: 0 $distance * 3;
-    }
+    top: $menu-height / 4; 
   }
 
 
 // Type & texts ----------------------------------------------------------------
-  .nav-title {
-    color: lighten($black, 25%);
-    font-size: $fh3;
-    line-height: $line-height-big;
-    margin-bottom: $distance * 3;
-  }
-
   li {
-    font-size: $fh0;
+    display: inline-block;
+    font-size: $fdef;
     font-weight: $bold;
-    line-height: $fh0 * 1.25;
+    line-height: $menu-height / 2;
+    list-style: none;
 
-    @include mq(mobile) {
-      font-size: 20vw;
-      line-height: 20vw * 1.25;
+    &.nav-current {
+      border: 1px solid;
     }
-  }
 
-  a {
-    transition: text-shadow 50ms;
 
-    &:focus,
-    &:hover {
-      border: 0;
-      text-shadow: $border * 1.5 $border * 1.5 $primary;
+    > a {
+      display: block;
+      padding-left: $distance;
+      padding-right: $distance;
     }
   }
 // -----------------------------------------------------------------------------
