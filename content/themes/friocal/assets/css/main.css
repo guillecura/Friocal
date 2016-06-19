@@ -253,7 +253,8 @@ body {
     font-weight: 400; }
 
 .site-footer {
-  height: 40px;
+  background-color: #c1c6ca;
+  height: 320px;
   position: relative;
   width: 100%; }
   .site-footer a:hover {
@@ -261,9 +262,9 @@ body {
     color: #223347; }
   .site-footer .copyright {
     bottom: 0;
-    color: #d3deea;
+    color: white;
     font-size: 0.7rem;
-    line-height: 40px;
+    line-height: 320px;
     position: absolute;
     text-align: center;
     width: 100%; }
@@ -856,8 +857,8 @@ h6 {
     width: 100%; }
   .work-sample .post-title {
     font-weight: 400;
-    height: 40px;
-    line-height: 40px;
+    height: 320px;
+    line-height: 320px;
     text-align: center; }
     @media (max-width: 640px) {
       .work-sample .post-title {
@@ -1082,7 +1083,7 @@ h6 {
 
 .contact-content {
   animation: op-in .999s ease-out forwards;
-  min-height: calc(100vh - 20vh - 180px);
+  min-height: calc(100vh - 20vh - 460px);
   padding: 15px 0; }
   @media (max-width: 640px) {
     .contact-content {
@@ -1230,7 +1231,7 @@ h6 {
         min-height: 0; } }
 
 .post-template:not(.page-template) .site-wrapper {
-  min-height: calc(100vh - 40px);
+  min-height: calc(100vh - 320px);
   padding: 0; }
 
 .post-template:not(.page-template) .content {
