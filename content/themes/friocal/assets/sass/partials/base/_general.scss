@@ -47,8 +47,12 @@ body {
 // Site wrapper ----------------------------------------------------------------
 .site-wrapper {
   min-height: $site-height;
-  padding-top: $menu-height;
   position: relative;
   width: 100%;
+
+  .content {
+    max-width: $site-box;
+    width: 100%;
+  }
 }
 // -----------------------------------------------------------------------------

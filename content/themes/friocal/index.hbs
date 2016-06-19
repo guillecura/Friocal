@@ -18,7 +18,20 @@
 {{!-- The main content area on the homepage --}}
 <main id="content" class="content" role="main">
 
-  {{!-- The tag below includes the post loop - partials/loop.hbs --}}
-  {{> "loop"}}
+  {{#get "posts" filter="featured:true" order="published_at desc" include="tags" as |featured|}}
+    {{#foreach featured}}
+      {{#has tag="about-us"}}
+        <article class="{{post_class}}">
+          <header class="post-header">
+            <h2 class="post-title">{{title}}</h2>
+          </header>
+
+          <section class="post-content">
+            <p>{{content}}</p>
+          </section>
+        </article>
+      {{/has}}
+    {{/foreach}}
+  {{/get}}
 
 </main>

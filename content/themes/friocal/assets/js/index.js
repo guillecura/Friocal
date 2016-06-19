@@ -18,6 +18,13 @@
       animation: "fade"
     });
 
+
+    $document.on('scroll', function () {
+      $('.flexslider li').css(
+        'background-position-y', $document.scrollTop() / 4);
+    });
+
+
   });
 
 })(jQuery);
