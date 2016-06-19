@@ -35,11 +35,14 @@ body > nav {
     left: $distance;
     width: $logo;
   }
-  
+
   .no-logo > a {
     font-size: $fh3;
-
+    left: $distance;
+    line-height: $menu-height;
+    position: absolute;
   }
+  
   > ul {
     position: absolute;
     right: $distance;
