@@ -434,9 +434,15 @@ body > nav {
   top: 0;
   width: 100%;
   z-index: 10001; }
+  body > nav .logo > a {
+    font-size: 0;
+    background-color: red;
+    display: block;
+    height: 40px;
+    width: 150px; }
   body > nav > ul {
     position: absolute;
-    right: 0;
+    right: 10px;
     text-align: right;
     top: 20px; }
   body > nav li {

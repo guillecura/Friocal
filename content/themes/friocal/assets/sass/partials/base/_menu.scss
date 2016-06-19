@@ -22,9 +22,19 @@ body > nav {
 
 // Main content
 // -----------------------------------------------------------------------------
+
+  .logo > a {
+    font-size: 0;
+    background-color: red;
+    display: block;
+    height: $menu-height / 2;
+    width: $logo;
+
+  }
+
   > ul {
     position: absolute;
-    right: 0;
+    right: $distance;
     text-align: right;
     top: $menu-height / 4;
   }
