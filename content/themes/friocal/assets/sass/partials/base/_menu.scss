@@ -24,12 +24,13 @@ body > nav {
 // -----------------------------------------------------------------------------
 
   .logo > a {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
     font-size: 0;
-    background-color: red;
     display: block;
-    height: $menu-height / 2;
+    height: $menu-height - $distance * 2.4;
     width: $logo;
-
   }
 
   > ul {

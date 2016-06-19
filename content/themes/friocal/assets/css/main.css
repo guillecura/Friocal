@@ -436,11 +436,13 @@ body > nav {
   width: 100%;
   z-index: 10001; }
   body > nav .logo > a {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
     font-size: 0;
-    background-color: red;
     display: block;
-    height: 40px;
-    width: 150px; }
+    height: 56px;
+    width: 180px; }
   body > nav > ul {
     position: absolute;
     right: 10px;
@@ -1075,7 +1077,7 @@ h6 {
 
 .contact-head {
   height: 20vh;
-  min-height: 150px;
+  min-height: 180px;
   position: relative;
   width: 100%; }
   .contact-head > .page-logo {
@@ -1083,9 +1085,9 @@ h6 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 150px;
+    height: 180px;
     margin: 30px auto;
-    width: 150px; }
+    width: 180px; }
 
 .contact-content {
   animation: op-in .999s ease-out forwards;
