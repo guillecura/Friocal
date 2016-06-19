@@ -30,9 +30,16 @@ body > nav {
     font-size: 0;
     display: block;
     height: $menu-height - $distance * 2.4;
+    position: absolute;
+    top: $distance * 1.2;
+    left: $distance;
     width: $logo;
   }
+  
+  .no-logo > a {
+    font-size: $fh3;
 
+  }
   > ul {
     position: absolute;
     right: $distance;
