@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import 'https://fonts.googleapis.com/css?family=Cairo';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
 @keyframes item-in {
   from {
     opacity: 0;
@@ -71,7 +71,7 @@ html {
 body {
   background-color: white;
   color: #223347;
-  font-family: "Cairo", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-feature-settings: 'kern';
   font-kerning: normal;
   font-smooth: always;
@@ -84,9 +84,8 @@ body {
     overflow: hidden; }
 
 .site-wrapper {
-  max-width: 1280px;
   min-height: calc(100vh - 120px);
-  padding-top: 110px;
+  padding-top: 80px;
   position: relative;
   width: 100%; }
 
@@ -190,6 +189,66 @@ body {
   .button:hover {
     border: 3px solid #be0000;
     color: #be0000; }
+
+.flexslider {
+  height: 100%;
+  width: 100%; }
+  .flexslider img {
+    display: none;
+    height: 0;
+    width: 0; }
+  .flexslider .flex-viewport,
+  .flexslider .slides {
+    height: 100%; }
+  .flexslider li {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%; }
+
+.flex-control-nav {
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 9999; }
+  .flex-control-nav li {
+    display: inline-block;
+    margin: 10px 5px; }
+    .flex-control-nav li a {
+      background-color: rgba(255, 255, 255, 0.5);
+      border: 1px solid #c1c6ca;
+      border-radius: 50%;
+      display: block;
+      font-size: 0;
+      height: 9px;
+      width: 9px; }
+      .flex-control-nav li a.flex-active {
+        background-color: white; }
+
+.flex-direction-nav {
+  display: none; }
+
+.flex-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-family: "Georgia", sans-serif;
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 700;
+  left: 0;
+  margin: 0 auto;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(34, 51, 71, 0.25);
+  width: 100%; }
+  .flex-caption > span {
+    font-family: "Open Sans", sans-serif;
+    font-size: 2rem;
+    font-weight: 400; }
 
 .site-footer {
   height: 40px;

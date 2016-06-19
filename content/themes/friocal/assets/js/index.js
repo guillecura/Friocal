@@ -14,6 +14,10 @@
     var $postContent = $(".post-content");
     $postContent.fitVids();
 
+    $('.flexslider').flexslider({
+      animation: "fade"
+    });
+
   });
 
 })(jQuery);
