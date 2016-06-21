@@ -8,6 +8,7 @@
 .site-footer {
   background-color: $stone;
   height: $footer-height;
+  padding: $distance * 3 $distance * 1.5;
   position: relative;
   width: 100%;
 
@@ -17,13 +18,74 @@
   }
 
 
+// Logo
+// -----------------------------------------------------------------------------
+  .logo > a {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0;
+    display: block;
+    height: $menu-height;
+    position: absolute;
+    top: $distance * 3;
+    left: $distance;
+    width: $logo;
+  }
+
+  .no-logo > a {
+    font-size: $fh3;
+    left: $distance;
+    line-height: $menu-height;
+    position: absolute;
+  }
+// -----------------------------------------------------------------------------
+
+
+// Contact Us
+// -----------------------------------------------------------------------------
+  .contact-us {
+    border: 1px solid $black;
+    color: $black;
+    display: block;
+    font-size: $fdef;
+    font-weight: $regular;
+    line-height: $menu-height / 2;
+    list-style: none;
+    padding-left: $distance;
+    padding-right: $distance;
+    position: absolute;
+    right: $distance;
+    top: $distance * 3;
+
+    &:hover {
+      border: 1px solid $white;
+      color: $white;
+    }
+  }
+// -----------------------------------------------------------------------------
+
+
+// Address
+// -----------------------------------------------------------------------------
+  .address span {
+    color: $white;
+    display: block;
+    font-size: $ftiny;
+    margin: $distance auto;
+    text-align: center;
+  }
+// -----------------------------------------------------------------------------
+
+
 // Copyright
 // -----------------------------------------------------------------------------
   .copyright {
     bottom: 0;
-    color: $white;
+    color: $smoke-dark;
     font-size: $ftiny;
-    line-height: $footer-height;
+    left: 0;
+    line-height: $line-height * 2;
     position: absolute;
     text-align: center;
     width: 100%;

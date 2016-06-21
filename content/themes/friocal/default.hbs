@@ -34,7 +34,28 @@
 
         {{!-- The tiny footer at the very bottom --}}
         <footer class="site-footer">
-            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}} Friocal S.A. Uruguay</section>
+          {{#if @blog.logo}}
+            <h1 class="logo">
+              <a href="{{@blog.url}}" style="background-image: url('{{@blog.logo}}');">
+                {{@blog.title}}
+              </a>
+            </h1>
+          {{else}}
+            <h1 class="no-logo">
+              <a href="{{@blog.url}}">
+                {{@blog.title}}
+              </a>
+            </h1>
+          {{/if}}
+
+          <a class="contact-us" href="mailto:info@friocal.com">Contact us!</a>
+
+          <section class="address">
+            <span>Vilardebó 2070, Montevideo - Uruguay</span>
+            <span>Tel/Fax: +(5982) 200 99 00 / +(5982) 200 02 46</span>
+          </section>
+
+          <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}} Friocal S.A. Uruguay</section>
         </footer>
 
     </div>

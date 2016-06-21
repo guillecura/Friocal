@@ -22,7 +22,6 @@ body > nav {
 
 // Main content
 // -----------------------------------------------------------------------------
-
   .logo > a {
     background-position: center top;
     background-repeat: no-repeat;
@@ -42,7 +41,7 @@ body > nav {
     line-height: $menu-height;
     position: absolute;
   }
-  
+
   > ul {
     position: absolute;
     right: $distance;

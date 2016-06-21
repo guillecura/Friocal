@@ -21,7 +21,7 @@ $tag-head:                   20vh;
 // -----------------------------------------------------------------------------
 $button-height:              60px;
 $header-height:              80px;
-$footer-height:              320px;
+$footer-height:              150px;
 $section-height:             calc(100vh - #{$header-height + $distance * 1.5});
 $contact-height:             calc(100vh - #{$tag-head} - #{$header-height + $footer-height + $distance * 6});
 $post-height:                calc(100vh - #{$footer-height});
