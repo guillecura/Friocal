@@ -6,7 +6,7 @@
 // General
 // -----------------------------------------------------------------------------
 .tag-about-us,
-.tag-brands {
+.tag-brand {
   padding: $distance * 6 $distance * 3 $distance * 3;
 
   .post-header,
@@ -14,5 +14,9 @@
     margin: 0;
     max-width: $post-box;
   }
+}
+
+.tag-brand {
+  padding-bottom: $distance * 10;
 }
 // -----------------------------------------------------------------------------

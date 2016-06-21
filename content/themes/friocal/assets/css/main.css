@@ -1128,14 +1128,17 @@ h6 {
     padding-left: 0; }
 
 .tag-about-us,
-.tag-brands {
+.tag-brand {
   padding: 60px 30px 30px; }
   .tag-about-us .post-header,
   .tag-about-us .post-content,
-  .tag-brands .post-header,
-  .tag-brands .post-content {
+  .tag-brand .post-header,
+  .tag-brand .post-content {
     margin: 0;
     max-width: 850px; }
+
+.tag-brand {
+  padding-bottom: 100px; }
 
 .post-template:not(.page-template) .post-heading {
   max-width: 1280px;
