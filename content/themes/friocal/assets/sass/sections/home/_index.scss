@@ -5,8 +5,9 @@
 
 // General
 // -----------------------------------------------------------------------------
-.tag-about-us {
-  padding: $distance * 6 $distance * 3;
+.tag-about-us,
+.tag-brands {
+  padding: $distance * 6 $distance * 3 $distance * 3;
 
   .post-header,
   .post-content {

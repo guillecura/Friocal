@@ -122,62 +122,25 @@ body {
   margin-right: -5px;
   vertical-align: top;
   animation: blured-out .999s ease-out forwards;
-  height: calc(50vw - 10px);
-  margin-left: 15px;
-  margin-top: 15px;
-  max-height: 630px;
-  max-width: 630px;
+  height: 240px;
+  margin: 5px;
+  max-height: 287.5px;
+  max-width: 287.5px;
   position: relative;
-  width: calc(50vw - 10px); }
-  .case-study > a:hover,
-  .case-study .post-title a {
-    border: 0; }
-  .case-study:hover {
-    border: 6px solid white; }
-    @media (max-width: 640px) {
-      .case-study:hover {
-        border: 0; } }
-  @media (max-width: 640px) {
-    .case-study {
-      display: block;
-      margin-right: auto;
-      height: calc(100vw - 30px);
-      margin-bottom: 10px;
-      margin-left: auto;
-      margin-top: auto;
-      width: calc(100vw - 30px); } }
-  .case-study:first-child {
-    display: block;
-    margin-right: auto;
-    margin-left: 0; }
-    @media (max-width: 640px) {
-      .case-study:first-child {
-        margin-left: auto; } }
-  .case-study:nth-child(2) {
-    margin-left: 0; }
-    @media (max-width: 640px) {
-      .case-study:nth-child(2) {
-        margin-left: auto;
-        margin-top: 15px; } }
+  width: 320px; }
   .case-study > a {
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 75%;
     display: block;
     height: 100%;
-    transition: all 75ms;
-    width: 100%;
-    z-index: 0; }
-  .case-study > section {
-    background-color: white;
-    bottom: 10px;
-    display: block;
-    left: 10px;
-    padding: 0 15px;
-    position: absolute;
-    z-index: 1; }
-  .case-study span {
-    font-size: 0.7rem; }
+    transition: transform 150ms;
+    width: 100%; }
+    .case-study > a:hover {
+      transform: scale(0.95); }
+  .case-study img {
+    height: 0;
+    width: 0; }
 
 .button {
   border: 3px solid #223347;
@@ -888,10 +851,10 @@ h6 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: calc(50vw - 10px);
+    height: 320px;
     max-height: 310px;
     max-width: 310px;
-    width: calc(50vw - 10px); }
+    width: 320px; }
     @media (max-width: 1280px) {
       .work-sample > a > figure {
         max-height: calc(((100vw - 340px) / 2) - 10px);
@@ -902,10 +865,10 @@ h6 {
         max-width: calc((100vw - 340px) - 10px); } }
     @media (max-width: 640px) {
       .work-sample > a > figure {
-        height: calc((100vw - 30px) / 2 - 10px);
+        height: 160px;
         max-height: none;
         max-width: none;
-        width: calc((100vw - 30px) / 2 - 10px); } }
+        width: 160px; } }
   .work-sample > a > section {
     background-color: white;
     display: block;
@@ -1164,10 +1127,13 @@ h6 {
     margin-top: 10px;
     padding-left: 0; }
 
-.tag-about-us {
-  padding: 60px 30px; }
+.tag-about-us,
+.tag-brands {
+  padding: 60px 30px 30px; }
   .tag-about-us .post-header,
-  .tag-about-us .post-content {
+  .tag-about-us .post-content,
+  .tag-brands .post-header,
+  .tag-brands .post-content {
     margin: 0;
     max-width: 850px; }
 

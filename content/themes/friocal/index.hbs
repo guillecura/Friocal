@@ -18,8 +18,8 @@
 {{!-- The main content area on the homepage --}}
 <main id="content" class="content" role="main">
 
-  {{#get "posts" filter="featured:true" order="published_at desc" include="tags" as |featured|}}
-    {{#foreach featured}}
+  {{#get "posts" filter="featured:true" order="published_at desc" include="tags" as |about|}}
+    {{#foreach about}}
       {{#has tag="about-us"}}
         <article class="{{post_class}}">
           <header class="post-header">
@@ -32,6 +32,26 @@
         </article>
       {{/has}}
     {{/foreach}}
+  {{/get}}
+
+  {{#get "posts" order="published_at asc" include="tags" as |brand|}}
+    <article class="tag-brands">
+      <h2>Our Brands</h2>
+
+      {{#foreach brand}}
+        {{#has tag="brand"}}
+          <figure class="case-study {{post_class}}">
+            <a href="{{@blog.url}}/tag/brands#{{slug}}"{{#if image}}style="background-image: url('{{image}}');"{{/if}}>
+              {{#if image}}
+                <img src="{{image}}" alt="{{title}}">
+              {{else}}
+                <h3>{{title}}</h3>
+              {{/if}}
+            </a>
+          </figure>
+        {{/has}}
+      {{/foreach}}
+    </article>
   {{/get}}
 
 </main>
