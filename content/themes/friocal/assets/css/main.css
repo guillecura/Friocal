@@ -142,6 +142,9 @@ body {
     height: 0;
     width: 0; }
 
+.post.tag-brands {
+  padding: 10px; }
+
 .button {
   border: 3px solid #223347;
   color: #223347;
@@ -302,27 +305,6 @@ body {
     width: 200px; }
   .main-header-content > .page-description {
     font-weight: 400; }
-
-.tag-head {
-  height: 20vh;
-  min-height: 120px;
-  position: relative;
-  width: 100%; }
-  .tag-head.no-cover {
-    height: 0;
-    min-height: 0; }
-  .tag-head > .page-description {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    animation: item-in .666s ease-out forwards;
-    font-weight: 400;
-    line-height: 1.11em;
-    text-align: center;
-    width: 100%; }
-    @media (max-width: 640px) {
-      .tag-head > .page-description {
-        font-size: 1rem; } }
 
 .menu-box {
   animation: none !important;
@@ -504,10 +486,13 @@ body > nav {
       border: 0; }
 
 .post-content {
-  margin-left: 0;
-  max-width: 850px; }
+  padding-top: 30px;
+  position: relative; }
   .post-content:last-of-type {
     margin-bottom: 50px; }
+  .post-content > * {
+    margin-left: 0;
+    max-width: 850px; }
   .post-content p {
     font-size: 0.85rem; }
     .post-content p + p {
@@ -531,21 +516,13 @@ body > nav {
   .post-content h6 {
     line-height: 3.33em; }
   .post-content .sidenote {
-    display: table; }
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 400px; }
     .post-content .sidenote > * {
-      display: table-cell;
-      padding-right: 10px;
-      vertical-align: top;
-      width: 65%; }
-      .post-content .sidenote > *:last-child {
-        border-left: 4.5px solid #e9e9e9;
-        font-size: 0.7rem;
-        font-weight: 300;
-        padding-left: 10px;
-        padding-right: 0;
-        width: 35%; }
-    .post-content .sidenote > p + p {
-      margin-top: 0; }
+      margin-bottom: 15px; }
   .post-content blockquote {
     border-left: 6px solid #e9e9e9;
     font-size: 1.25rem;
@@ -670,43 +647,43 @@ a[class='twitter'] {
 a[class='dribbble'] {
   background-image: url("../img/icon-dribbble.svg"); }
 
-.about-content > .post, .post-template:not(.page-template) article, article.thought {
+.about-content > .post, .post-template:not(.page-template) article {
   max-width: 850px;
   padding: 30px 0;
   width: 100%; }
-  .about-content > .post + .thought::before, .post-template:not(.page-template) article + .thought::before, article.thought + .thought::before {
+  .about-content > .post + .thought::before, .post-template:not(.page-template) article + .thought::before {
     border-top: 3px solid #223347;
     content: '';
     display: block;
     margin: 10px auto 40px;
     width: 10%; }
-  .about-content > .post:last-of-type, .post-template:not(.page-template) article:last-of-type, article.thought:last-of-type {
+  .about-content > .post:last-of-type, .post-template:not(.page-template) article:last-of-type {
     margin-bottom: 100px; }
     @media (max-width: 640px) {
-      .about-content > .post:last-of-type, .post-template:not(.page-template) article:last-of-type, article.thought:last-of-type {
+      .about-content > .post:last-of-type, .post-template:not(.page-template) article:last-of-type {
         margin-bottom: 50px; } }
-  .about-content > .post .post-header, .post-template:not(.page-template) article .post-header, article.thought .post-header {
+  .about-content > .post .post-header, .post-template:not(.page-template) article .post-header {
     margin-bottom: 20px; }
-  .about-content > .post .post-title, .post-template:not(.page-template) article .post-title, article.thought .post-title {
+  .about-content > .post .post-title, .post-template:not(.page-template) article .post-title {
     line-height: 1.11em;
     margin-bottom: 5px; }
-  .about-content > .post .post-date, .post-template:not(.page-template) article .post-date, article.thought .post-date {
+  .about-content > .post .post-date, .post-template:not(.page-template) article .post-date {
     font-size: 0.7rem;
     font-weight: 300;
     line-height: 1.11em; }
-  .about-content > .post .post-excerpt p, .post-template:not(.page-template) article .post-excerpt p, article.thought .post-excerpt p {
+  .about-content > .post .post-excerpt p, .post-template:not(.page-template) article .post-excerpt p {
     font-size: 0.85rem; }
-  .about-content > .post .post-excerpt span, .post-template:not(.page-template) article .post-excerpt span, article.thought .post-excerpt span {
+  .about-content > .post .post-excerpt span, .post-template:not(.page-template) article .post-excerpt span {
     float: left;
     font-size: 0.7rem;
     margin: 10px 0; }
-  .about-content > .post .post-excerpt [class*='tag-'], .post-template:not(.page-template) article .post-excerpt [class*='tag-'], article.thought .post-excerpt [class*='tag-'] {
+  .about-content > .post .post-excerpt [class*='tag-'], .post-template:not(.page-template) article .post-excerpt [class*='tag-'] {
     font-weight: 300; }
-    .about-content > .post .post-excerpt [class*='tag-']::after, .post-template:not(.page-template) article .post-excerpt [class*='tag-']::after, article.thought .post-excerpt [class*='tag-']::after {
+    .about-content > .post .post-excerpt [class*='tag-']::after, .post-template:not(.page-template) article .post-excerpt [class*='tag-']::after {
       content: ', '; }
-    .about-content > .post .post-excerpt [class*='tag-']:last-of-type::after, .post-template:not(.page-template) article .post-excerpt [class*='tag-']:last-of-type::after, article.thought .post-excerpt [class*='tag-']:last-of-type::after {
+    .about-content > .post .post-excerpt [class*='tag-']:last-of-type::after, .post-template:not(.page-template) article .post-excerpt [class*='tag-']:last-of-type::after {
       display: none; }
-  .about-content > .post .post-excerpt .read-more, .post-template:not(.page-template) article .post-excerpt .read-more, article.thought .post-excerpt .read-more {
+  .about-content > .post .post-excerpt .read-more, .post-template:not(.page-template) article .post-excerpt .read-more {
     float: right;
     font-size: 0.7rem;
     margin: 10px 0; }
@@ -1279,53 +1256,14 @@ h6 {
       .post-template:not(.page-template) .share > a[class*='icon-'] {
         margin-top: 0; } }
 
-.tag-aside {
-  display: inline-block;
-  margin-right: -5px;
-  vertical-align: top;
-  max-width: 320px;
-  width: 25%; }
-  @media (max-width: 1280px) {
-    .tag-aside {
-      min-width: 330px; } }
-  @media (max-width: 640px) {
-    .tag-aside {
-      display: none; } }
-  .tag-aside.fixed {
-    position: fixed;
-    top: 30px; }
-  .tag-aside .page-description {
-    margin-bottom: 15px;
-    padding: 15px;
-    padding-left: 0; }
-    @media (max-width: 1280px) {
-      .tag-aside .page-description {
-        padding-left: 15px; } }
-  .tag-aside .menu-box {
-    max-width: none; }
-
-.tag-content {
-  display: inline-block;
-  margin-right: -5px;
-  vertical-align: top;
+.content {
   animation: op-in .999s ease-out forwards;
   min-height: 0;
   width: 75%; }
-  @media (max-width: 1280px) {
-    .tag-content {
-      max-width: calc(100% - 330px);
-      padding-right: 15px; } }
-  @media (max-width: 640px) {
-    .tag-content {
-      max-width: none;
-      padding: 15px;
-      padding-top: 0;
-      width: 100%; } }
-  .tag-content.fixed {
-    margin-left: 25%; }
-    @media (max-width: 1280px) {
-      .tag-content.fixed {
-        margin-left: 330px; } }
-    @media (max-width: 640px) {
-      .tag-content.fixed {
-        margin-left: 0; } }
+
+.tag-head {
+  min-height: 150px;
+  margin-bottom: 30px;
+  padding-top: 150px;
+  position: relative;
+  width: 1280px; }

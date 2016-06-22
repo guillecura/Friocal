@@ -5,76 +5,21 @@
 
 // General
 // -----------------------------------------------------------------------------
-.tag-aside {
-  @include inline-block;
-  max-width: $site-box / 4;
-  width: 25%;
-
-  @include mq(desktop) {
-    min-width: $distance * 3 + 300;
-  }
-
-  @include mq(mobile) {
-    display: none;
-  }
-
-  &.fixed {
-    position: fixed;
-    top: $distance * 3;
-  }
-
-  .page-description {
-    margin-bottom: $distance *1.5;
-    padding: $distance * 1.5;
-    padding-left: 0;
-
-    @include mq(desktop) {
-      padding-left: $distance * 1.5;
-    }
-  }
-
-  .menu-box {
-    max-width: none;
-  }
-}
-
-.tag-content {
-  @include inline-block;
+.content {
   animation: op-in .999s ease-out forwards; // Opacity In animation
   min-height: 0;
   width: 75%;
-
-  @include mq(desktop) {
-    max-width: calc(100% - #{$distance * 3 + 300});
-    padding-right: $distance * 1.5;
-  }
-
-  @include mq(mobile) {
-    max-width: none;
-    padding: $distance * 1.5;
-    padding-top: 0;
-    width: 100%;
-  }
-
-  &.fixed {
-    margin-left: 25%;
-
-    @include mq(desktop) {
-      margin-left: $distance * 3 + 300;
-    }
-
-    @include mq(mobile) {
-      margin-left: 0;
-    }
-  }
 }
 // -----------------------------------------------------------------------------
 
 
-// Add single thoughts styles
+// Tag & Contact header
 // -----------------------------------------------------------------------------
-// scss-lint:disable QualifyingElement
-article.thought {
-  @extend %thought;
+.tag-head {
+  min-height: $header-height + $distance * 7;
+  margin-bottom: $distance * 3;
+  padding-top: $header-height + $distance * 7;
+  position: relative;
+  width: $site-box;
 }
 // -----------------------------------------------------------------------------
