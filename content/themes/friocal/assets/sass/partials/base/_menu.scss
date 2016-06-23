@@ -47,6 +47,18 @@ body > nav {
     right: $distance;
     text-align: right;
     top: $menu-height / 4;
+
+    @include mq(hybrid) {
+      background-color: rgba($white, .95);
+      bottom: 0;
+      height: 100vh;
+      left: 0;
+      padding-top: $menu-height + $distance * 3;
+      right: 0;
+      text-align: center;
+      top: 0;
+      width: 100vw;
+    }
   }
 
 
@@ -60,10 +72,21 @@ body > nav {
     line-height: $menu-height / 2;
     list-style: none;
 
+    @include mq(hybrid) {
+      border: 0;
+      display: block;
+      font-size: 10vw;
+      line-height: 12vw;
+    }
+
     &:hover,
     &.nav-current {
       border-color: $black;
       color: $black;
+
+      @include mq(hybrid) {
+        border: 0;
+      }
     }
 
     + li {

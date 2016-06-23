@@ -377,6 +377,17 @@ body > nav {
     right: 10px;
     text-align: right;
     top: 20px; }
+    @media (max-width: 854px) {
+      body > nav > ul {
+        background-color: rgba(255, 255, 255, 0.95);
+        bottom: 0;
+        height: 100vh;
+        left: 0;
+        padding-top: 110px;
+        right: 0;
+        text-align: center;
+        top: 0;
+        width: 100vw; } }
   body > nav li {
     border: 1px solid transparent;
     color: #c1c6ca;
@@ -385,9 +396,18 @@ body > nav {
     font-weight: 700;
     line-height: 40px;
     list-style: none; }
+    @media (max-width: 854px) {
+      body > nav li {
+        border: 0;
+        display: block;
+        font-size: 10vw;
+        line-height: 12vw; } }
     body > nav li:hover, body > nav li.nav-current {
       border-color: #223347;
       color: #223347; }
+      @media (max-width: 854px) {
+        body > nav li:hover, body > nav li.nav-current {
+          border: 0; } }
     body > nav li + li {
       margin-left: 10px; }
     body > nav li > a {
