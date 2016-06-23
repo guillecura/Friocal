@@ -6,7 +6,7 @@
 // Basic
 // -----------------------------------------------------------------------------
 .button {
-  border: $border solid $black;
+  border: 1px solid $black;
   color: $black;
   display: inline-block;
   font-weight: $medium;
@@ -16,7 +16,7 @@
   transition: color 150ms ease-out, border-color 150ms ease-out;
 
   &:hover {
-    border: $border solid $primary;
+    border: 1px solid $primary;
     color: $primary;
   }
 }

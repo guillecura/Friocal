@@ -6,20 +6,13 @@
 // General
 // -----------------------------------------------------------------------------
 .contact-head {
-  height: $tag-head;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: $tag-head * 3;
   min-height: $logo;
   position: relative;
   width: 100%;
-
-  > .page-logo {
-    animation: item-in .666s ease-out forwards;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: $logo;
-    margin: $distance * 3 auto;
-    width: $logo;
-  }
 }
 
 .contact-content {
@@ -45,6 +38,7 @@
 
     .button {
       color: inherit;
+      line-height: 4em;
       margin: $distance * 2 auto;
     }
 

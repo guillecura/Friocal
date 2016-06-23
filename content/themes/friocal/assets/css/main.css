@@ -185,7 +185,7 @@ body {
     margin: 20px 0 0; }
 
 .button {
-  border: 3px solid #223347;
+  border: 1px solid #223347;
   color: #223347;
   display: inline-block;
   font-weight: 500;
@@ -194,7 +194,7 @@ body {
   padding: 0 20px;
   transition: color 150ms ease-out, border-color 150ms ease-out; }
   .button:hover {
-    border: 3px solid #be0000;
+    border: 1px solid #be0000;
     color: #be0000; }
 
 .flexslider {
@@ -1020,18 +1020,13 @@ h6 {
     text-align: left; } }
 
 .contact-head {
-  height: 20vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
   min-height: 180px;
   position: relative;
   width: 100%; }
-  .contact-head > .page-logo {
-    animation: item-in .666s ease-out forwards;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 180px;
-    margin: 30px auto;
-    width: 180px; }
 
 .contact-content {
   animation: op-in .999s ease-out forwards;
@@ -1050,6 +1045,7 @@ h6 {
         padding: 10px 15px; } }
     .contact-content > article .button {
       color: inherit;
+      line-height: 4em;
       margin: 20px auto; }
     .contact-content > article span {
       font-size: 0.85rem; }
