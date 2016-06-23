@@ -24,6 +24,24 @@
         'background-position-y', $document.scrollTop() / 4);
     });
 
+    // Menu & menu button animation
+    var $btn = $(".menu-icon");
+    var $body = $("body");
+    var $nav = $("body > nav > ul");
+
+    $btn.on("click tap", function(e){
+      e.preventDefault();
+      if ($body.hasClass("nav-closed")) {
+        $(this).addClass("nav-close");
+        $body.toggleClass("nav-opened nav-closed");
+        $nav.addClass("opened");
+      } else {
+        $(this).removeClass("nav-close");
+        $body.toggleClass("nav-opened nav-closed");
+        $nav.removeClass("opened");
+      }
+    });
+
 
   });
 

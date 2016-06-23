@@ -383,11 +383,17 @@ body > nav {
         bottom: 0;
         height: 100vh;
         left: 0;
+        opacity: 0;
         padding-top: 110px;
+        pointer-events: none;
         right: 0;
         text-align: center;
         top: 0;
-        width: 100vw; } }
+        transition: all 250ms ease-out;
+        width: 100vw; }
+        body > nav > ul.opened {
+          opacity: 1;
+          pointer-events: all; } }
   body > nav li {
     border: 1px solid transparent;
     color: #c1c6ca;
@@ -415,6 +421,24 @@ body > nav {
       font-weight: 400;
       padding-left: 10px;
       padding-right: 10px; }
+
+.menu-icon {
+  background-image: url("../img/icon-menu.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: #99a6b0;
+  cursor: pointer;
+  display: none;
+  height: 26.66667px;
+  position: fixed;
+  right: 26.66667px;
+  top: 26.66667px;
+  width: 26.66667px; }
+  @media (max-width: 854px) {
+    .menu-icon {
+      display: block;
+      z-index: 10000; } }
 
 .main-nav {
   animation: header-in .333s ease-out forwards;
