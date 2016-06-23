@@ -1089,11 +1089,14 @@ h6 {
       margin: 20px auto; }
     .contact-content > article span {
       font-size: 0.85rem; }
+    .contact-content > article p {
+      margin-left: auto;
+      margin-right: auto; }
   @media (max-width: 640px) {
     .contact-content .post-title {
       font-size: 2rem; } }
   .contact-content .social-links {
-    margin-top: 10px;
+    margin: 10px auto auto;
     padding-left: 0; }
 
 .tag-about-us,
