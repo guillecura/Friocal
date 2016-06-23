@@ -1,38 +1,15 @@
 {{! This is the post loop - each post will be output using this markup }}
 <div class="flexslider">
   <ul class="slides">
-    <li style="background-image: url('{{asset "img/image-00.jpg"}}');">
-      <img src="{{asset "img/image-00.jpg"}}">
-    </li>
-
-    <li style="background-image: url('{{asset "img/image-05.jpg"}}');">
-      <img src="{{asset "img/image-05.jpg"}}">
-      <h3 class="flex-caption">SPLIT AIR CONDITIONERS<br>
-        <span>Ultra quiet and low consumption</span></h3>
-    </li>
-
-    <li style="background-image: url('{{asset "img/image-01.jpg"}}');">
-      <img src="{{asset "img/image-01.jpg"}}">
-      <h3 class="flex-caption">SAUNAS<br>
-        <span>Top quality, imported from Tylo AB, Sweden</span></h3>
-    </li>
-
-    <li style="background-image: url('{{asset "img/image-03.jpg"}}');">
-      <img src="{{asset "img/image-03.jpg"}}">
-      <h3 class="flex-caption">SPA<br>
-      <span>Premium Leisure, USA</span></h3>
-    </li>
-
-    <li style="background-image: url('{{asset "img/image-02.jpg"}}');">
-      <img src="{{asset "img/image-02.jpg"}}">
-      <h3 class="flex-caption">BOILERS AND HEATERS<br>
-        <span>High-performance and the best support</span></h3>
-    </li>
-
-    <li style="background-image: url('{{asset "img/image-04.jpg"}}');">
-      <img src="{{asset "img/image-04.jpg"}}">
-      <h3 class="flex-caption">BURNERS<br>
-        <span>The best quality in the world, as BALTUR usual, Italy</span></h3>
-    </li>
+    {{#get "posts" filter="featured:true" order="published_at asc" include="tags" as |slides|}}
+      {{#foreach slides}}
+        {{#has tag="hero"}}
+          <li style="background-image: url('{{image}}');">
+            <img src="{{image}}">
+            <span class="flex-caption">{{content}}</span>
+          </li>
+        {{/has}}
+      {{/foreach}}
+    {{/get}}
   </ul>
 </div>
