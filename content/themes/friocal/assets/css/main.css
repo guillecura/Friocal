@@ -142,8 +142,47 @@ body {
     height: 0;
     width: 0; }
 
-.post.tag-brands {
-  padding: 10px; }
+.tag-template .post.tag-brands {
+  border-left: 3px solid transparent;
+  margin: 0;
+  max-width: 850px;
+  transition: all 150ms ease-out;
+  width: 100%; }
+  .tag-template .post.tag-brands:hover {
+    border-left: 3px solid #be0000; }
+  .tag-template .post.tag-brands:last-of-type {
+    margin-bottom: 50px; }
+  .tag-template .post.tag-brands figure {
+    display: inline-block;
+    margin-right: -5px;
+    vertical-align: top;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 15px;
+    max-height: 10vw;
+    max-width: 10vw;
+    min-height: 150px;
+    min-width: 150px;
+    vertical-align: middle; }
+  .tag-template .post.tag-brands section {
+    display: inline-block;
+    margin-right: -5px;
+    vertical-align: top;
+    font-style: italic;
+    padding: 10px 30px;
+    vertical-align: middle; }
+    .tag-template .post.tag-brands section h5 {
+      font-style: normal; }
+    .tag-template .post.tag-brands section a {
+      font-style: normal;
+      text-decoration: underline; }
+      .tag-template .post.tag-brands section a:hover {
+        color: #be0000; }
+  .tag-template .post.tag-brands hr {
+    border: 0;
+    border-top: 1px solid #e9e9e9;
+    margin: 20px 0 0; }
 
 .button {
   border: 3px solid #223347;
