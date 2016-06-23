@@ -73,10 +73,21 @@
   text-shadow: 0 0 $distance rgba($black, .25);
   width: 100%;
 
+  @include mq(hybrid) {
+    line-height: .666em;
+
+    h1 {font-size: 10vw;}
+  }
+
   em {
     font-family: $primary-font;
     font-size: $fh2;
     font-weight: $regular;
+
+    @include mq(hybrid) {
+      font-size: 6vw;
+      line-height: $line-height;
+    }
   }
 }
 // -----------------------------------------------------------------------------

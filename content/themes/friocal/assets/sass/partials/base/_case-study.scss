@@ -15,6 +15,13 @@
   position: relative;
   width: $case-size;
 
+  @include mq(hybrid) {
+    height: $m-case-size;
+    max-height: calc(50vw - #{$distance * 3});
+    max-width: calc(50vw - #{$distance * 3});
+    width: $m-case-size;
+  }
+
   > a {
     background-position: center;
     background-repeat: no-repeat;

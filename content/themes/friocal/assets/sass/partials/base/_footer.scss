@@ -12,6 +12,11 @@
   position: relative;
   width: 100%;
 
+  @include mq(mobile) {
+    height: auto;
+    text-align: center;
+  }
+
   a:hover {
     border: 0;
     color: $black;
@@ -31,6 +36,10 @@
     top: $distance * 3;
     left: $distance;
     width: $logo;
+
+    @include mq(mobile) {
+      position: static;
+    }
   }
 
   .no-logo > a {
@@ -57,6 +66,12 @@
     position: absolute;
     right: $distance;
     top: $distance * 3;
+
+    @include mq(mobile) {
+      display: inline-block;
+      margin: $distance * 3 auto;
+      position: static;
+    }
 
     &:hover {
       border: 1px solid $white;

@@ -128,6 +128,12 @@ body {
   max-width: 223.5px;
   position: relative;
   width: 256px; }
+  @media (max-width: 854px) {
+    .case-study {
+      height: calc(50vw - 30px);
+      max-height: calc(50vw - 30px);
+      max-width: calc(50vw - 30px);
+      width: calc(50vw - 30px); } }
   .case-study > a {
     background-position: center;
     background-repeat: no-repeat;
@@ -143,13 +149,13 @@ body {
     width: 0; }
 
 .tag-template .post.tag-brands {
-  border-left: 3px solid transparent;
+  border-left: 6px solid transparent;
   margin: 0;
   max-width: 720px;
   transition: all 150ms ease-out;
   width: 100%; }
   .tag-template .post.tag-brands:hover {
-    border-left: 3px solid #be0000; }
+    border-left: 6px solid #be0000; }
   .tag-template .post.tag-brands:last-of-type {
     margin-bottom: 50px; }
   .tag-template .post.tag-brands figure {
@@ -252,10 +258,19 @@ body {
   text-align: center;
   text-shadow: 0 0 10px rgba(34, 51, 71, 0.25);
   width: 100%; }
+  @media (max-width: 854px) {
+    .flex-caption {
+      line-height: .666em; }
+      .flex-caption h1 {
+        font-size: 10vw; } }
   .flex-caption em {
     font-family: "OpenSans", sans-serif;
     font-size: 2rem;
     font-weight: 400; }
+    @media (max-width: 854px) {
+      .flex-caption em {
+        font-size: 6vw;
+        line-height: 1.11em; } }
 
 .site-footer {
   background-color: #c1c6ca;
@@ -263,6 +278,10 @@ body {
   padding: 30px 15px;
   position: relative;
   width: 100%; }
+  @media (max-width: 640px) {
+    .site-footer {
+      height: auto;
+      text-align: center; } }
   .site-footer a:hover {
     border: 0;
     color: #223347; }
@@ -277,6 +296,9 @@ body {
     top: 30px;
     left: 10px;
     width: 180px; }
+    @media (max-width: 640px) {
+      .site-footer .logo > a {
+        position: static; } }
   .site-footer .no-logo > a {
     font-size: 1.5rem;
     left: 10px;
@@ -295,6 +317,11 @@ body {
     position: absolute;
     right: 10px;
     top: 30px; }
+    @media (max-width: 640px) {
+      .site-footer .contact-us {
+        display: inline-block;
+        margin: 30px auto;
+        position: static; } }
     .site-footer .contact-us:hover {
       border: 1px solid white;
       color: white; }
@@ -525,6 +552,7 @@ body > nav {
       border: 0; }
 
 .post-content {
+  padding: 0 15px;
   padding-top: 30px;
   position: relative; }
   .post-content:last-of-type {
@@ -532,6 +560,12 @@ body > nav {
   .post-content > * {
     margin-left: 0;
     max-width: 720px; }
+    @media (max-width: 1280px) {
+      .post-content > * {
+        max-width: calc(75% - 30px); } }
+    @media (max-width: 854px) {
+      .post-content > * {
+        max-width: 100%; } }
   .post-content p {
     font-size: 0.85rem; }
     .post-content p + p {
@@ -557,9 +591,15 @@ body > nav {
   .post-content .sidenote {
     display: block;
     position: absolute;
-    right: 0;
+    right: 15px;
     top: 60px;
     width: 274px; }
+    @media (max-width: 1280px) {
+      .post-content .sidenote {
+        max-width: 25%; } }
+    @media (max-width: 854px) {
+      .post-content .sidenote {
+        display: none; } }
     .post-content .sidenote > * {
       margin-bottom: 15px; }
   .post-content blockquote {
@@ -1059,12 +1099,27 @@ h6 {
 .tag-about-us,
 .tag-brand {
   padding: 60px 30px 30px; }
+  @media (max-width: 1280px) {
+    .tag-about-us > h2,
+    .tag-brand > h2 {
+      padding: 0 15px; } }
+  @media (max-width: 854px) {
+    .tag-about-us,
+    .tag-brand {
+      padding-left: 0;
+      padding-right: 0; } }
   .tag-about-us .post-header,
   .tag-about-us .post-content,
   .tag-brand .post-header,
   .tag-brand .post-content {
     margin: 0;
     max-width: 720px; }
+    @media (max-width: 1280px) {
+      .tag-about-us .post-header,
+      .tag-about-us .post-content,
+      .tag-brand .post-header,
+      .tag-brand .post-content {
+        padding: 0 15px; } }
 
 .tag-brand {
   padding-bottom: 100px; }

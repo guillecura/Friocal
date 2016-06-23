@@ -6,14 +6,14 @@
 // Brands
 // -----------------------------------------------------------------------------
 .tag-template .post.tag-brands {
-  border-left: $border solid transparent;
+  border-left: $border * 2 solid transparent;
   margin: 0;
   max-width: $post-box;
   transition: all 150ms ease-out;
   width: 100%;
 
   &:hover {
-    border-left: $border solid $primary;
+    border-left: $border * 2 solid $primary;
   }
 
   &:last-of-type {
