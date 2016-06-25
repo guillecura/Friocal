@@ -42,6 +42,29 @@
       }
     });
 
+    // Gallery filters
+
+    var $tag = $(".filters span");
+    var $imageItem = $(".content .gallery-image");
+
+    $tag.on("click tap", function(){
+
+      $imageItem.removeClass("active");
+
+      var brand = $(this).data("brand");
+      var image = $imageItem.data("name");
+
+      if (!$(this).hasClass("active")) {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+      }
+
+      $(".content .gallery-image[data-name='" + brand + "']").addClass("active");
+
+      if (brand == "no-filter") {
+        $imageItem.addClass("active");
+      }
+    });
 
   });
 

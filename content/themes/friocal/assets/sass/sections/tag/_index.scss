@@ -21,5 +21,11 @@
   padding-top: $header-height + $distance * 7;
   position: relative;
   width: $site-box;
+
+  @include mq(desktop) {
+    padding-left: $distance * 1.5;
+    padding-right: $distance * 1.5;
+    width: 100%;
+  }
 }
 // -----------------------------------------------------------------------------
