@@ -1,0 +1,70 @@
+// =============================================================================
+// GALLERY PAGE STYLES
+// =============================================================================
+
+
+// General
+// -----------------------------------------------------------------------------
+.tag-gallery {
+  .filters {
+    background-color: $smoke;
+    display: block;
+    margin: $distance 0;
+    padding: $distance / 2;
+
+    > span {
+      @include inline-block;
+      color: $stone-dark;
+      font-size: $fsmall;
+      margin: $distance / 2;
+      text-transform: lowercase;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+
+      &.active,
+      &:hover {
+        color: $gray-dark;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .gallery-image {
+    @include inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 0;
+    height: #{$site-box / 4 - $distance};
+    margin-bottom: $distance;
+    margin-left: $distance / 2;
+    margin-right: 0;
+    position: relative;
+    width: #{$site-box / 4 - $distance};
+
+    &::after {
+      background-color: rgba($white, .75);
+      background-image: url('../img/icon-lens.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 15%;
+      bottom: 0;
+      content: '';
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: opacity 150ms ease-out;
+      width: 100%;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+}
+// -----------------------------------------------------------------------------
