@@ -93,6 +93,22 @@
 // -----------------------------------------------------------------------------
 
 
+// Language
+// -----------------------------------------------------------------------------
+  .language {
+      color: $secondary-dark;
+      display: inline;;
+      margin: $distance;
+      padding-left: $distance;
+      padding-right: $distance;
+      padding-top: $distance;
+      padding-bottom: $distance;
+      position: absolute;;
+      text-align: center;
+  }
+//------------------------------------------------------------------------------
+
+
 // Copyright
 // -----------------------------------------------------------------------------
   .copyright {
