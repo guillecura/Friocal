@@ -293,7 +293,7 @@ body {
     @media (max-width: 640px) {
       .site-footer .contact-us {
         display: inline-block;
-        margin: 30px auto;
+        margin: 30px auto 10px;
         position: static; } }
     .site-footer .contact-us:hover {
       border: 1px solid white;
@@ -306,14 +306,15 @@ body {
     text-align: center; }
   .site-footer .language {
     color: #111031;
-    display: inline;
-    margin: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    display: block;
+    font-size: 0.85rem;
     position: absolute;
+    right: 10px;
     text-align: center; }
+    @media (max-width: 640px) {
+      .site-footer .language {
+        margin: 10px auto 30px;
+        position: static; } }
   .site-footer .copyright {
     bottom: 0;
     color: #e9e9e9;
@@ -332,6 +333,9 @@ body {
   max-height: 100vh;
   min-height: 450px;
   position: relative; }
+  @media (max-width: 640px) {
+    .hero-section {
+      max-height: 66vh; } }
   .hero-section.no-cover {
     background-color: white; }
   .hero-section.hero-section:not(.no-cover) {
@@ -426,6 +430,9 @@ body > nav {
           border: 0; } }
     body > nav li + li {
       margin-left: 10px; }
+      @media (max-width: 854px) {
+        body > nav li + li {
+          margin-left: 0; } }
     body > nav li > a {
       display: block;
       font-weight: 400;

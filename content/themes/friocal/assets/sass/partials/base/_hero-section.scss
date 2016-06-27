@@ -14,6 +14,10 @@
   min-height: $hero-min-height;
   position: relative;
 
+  @include mq(mobile) {
+    max-height: 66vh;
+  }
+
   &.no-cover {background-color: $white;}
 
   &.hero-section:not(.no-cover) {

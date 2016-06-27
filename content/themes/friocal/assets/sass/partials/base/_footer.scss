@@ -69,7 +69,7 @@
 
     @include mq(mobile) {
       display: inline-block;
-      margin: $distance * 3 auto;
+      margin: $distance * 3 auto $distance;
       position: static;
     }
 
@@ -96,15 +96,17 @@
 // Language
 // -----------------------------------------------------------------------------
   .language {
-      color: $secondary-dark;
-      display: inline;;
-      margin: $distance;
-      padding-left: $distance;
-      padding-right: $distance;
-      padding-top: $distance;
-      padding-bottom: $distance;
-      position: absolute;;
-      text-align: center;
+    color: $secondary-dark;
+    display: block;
+    font-size: $fsmall;
+    position: absolute;
+    right: $distance;
+    text-align: center;
+
+    @include mq(mobile) {
+      margin: $distance auto $distance * 3;
+      position: static;
+    }
   }
 //------------------------------------------------------------------------------
 

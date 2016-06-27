@@ -99,6 +99,10 @@ body > nav {
 
     + li {
       margin-left: $distance;
+
+      @include mq(hybrid) {
+        margin-left: 0;
+      }
     }
 
     > a {
