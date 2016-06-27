@@ -65,7 +65,7 @@
     padding-right: $distance;
     position: absolute;
     right: $distance;
-    top: $distance * 3;
+    top: $distance * 4;
 
     @include mq(mobile) {
       display: inline-block;
@@ -102,6 +102,7 @@
     position: absolute;
     right: $distance;
     text-align: center;
+    top: $distance * 9;
 
     @include mq(mobile) {
       margin: $distance auto $distance * 3;
