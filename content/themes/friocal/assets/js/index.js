@@ -47,25 +47,35 @@
     var $tag = $(".filters span");
     var $imageItem = $(".content .gallery-image");
 
-    $tag.on("click tap", function(){
-
-      $imageItem.removeClass("active");
-
+    $tag.each(function() {
       var brand = $(this).data("brand");
       var image = $imageItem.data("name");
+      var brandActive = $(".content .gallery-image[data-name='" + brand + "']");
 
-      if (!$(this).hasClass("active")) {
-        $(this).addClass("active");
-        $(this).siblings().removeClass("active");
+      if ($(brandActive).length == 0) {
+        $(this).hide();
+
+        if (brand == "no-filter") {
+          $(this).show();
+        }
       }
 
-      $(".content .gallery-image[data-name='" + brand + "']").addClass("active");
+      $(this).on("click tap", function(){
 
-      if (brand == "no-filter") {
-        $imageItem.addClass("active");
-      }
+        $imageItem.removeClass("active");
+
+        if (!$(this).hasClass("active")) {
+          $(this).addClass("active");
+          $(this).siblings().removeClass("active");
+        }
+
+        brandActive.addClass("active");
+
+        if (brand == "no-filter") {
+          $imageItem.addClass("active");
+        }
+      });
     });
-
   });
 
 })(jQuery);
