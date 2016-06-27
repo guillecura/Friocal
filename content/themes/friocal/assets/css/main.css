@@ -178,6 +178,7 @@ body {
 
 .flexslider {
   height: 100%;
+  overflow-x: hidden;
   width: 100%; }
   .flexslider img {
     display: none;
