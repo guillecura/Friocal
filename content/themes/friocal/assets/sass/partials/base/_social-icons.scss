@@ -11,12 +11,11 @@
   > li {
     display: inline-block;
     font-size: 0;
-    height: $icon * 2;
-    width: $icon * 2;
+    height: $icon;
 
     @include mq(mobile) {
-      height: $icon * 1.25;
-      width: $icon * 1.25;
+      height: $icon * .8;
+      width: $icon * .8;
     }
 
     + li {
@@ -25,11 +24,16 @@
   }
 
   a {
+    background-position: left;
+    background-repeat: no-repeat;
     display: block;
-    font-size: 0;
+    font-size: $fdef;
     height: 100%;
+    line-height: $icon;
+    padding-left: $icon + $distance / 2;
     transform-origin: center;
     transition: transform .1s ease-out;
+    vertical-align: middle;
     width: 100%;
 
     &:hover {

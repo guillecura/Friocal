@@ -553,20 +553,24 @@ body > nav {
   .social-links > li {
     display: inline-block;
     font-size: 0;
-    height: 64px;
-    width: 64px; }
+    height: 32px; }
     @media (max-width: 640px) {
       .social-links > li {
-        height: 40px;
-        width: 40px; } }
+        height: 25.6px;
+        width: 25.6px; } }
     .social-links > li + li {
       margin-left: 10px; }
   .social-links a {
+    background-position: left;
+    background-repeat: no-repeat;
     display: block;
-    font-size: 0;
+    font-size: 1rem;
     height: 100%;
+    line-height: 32px;
+    padding-left: 37px;
     transform-origin: center;
     transition: transform .1s ease-out;
+    vertical-align: middle;
     width: 100%; }
     .social-links a:hover {
       border: 0;
