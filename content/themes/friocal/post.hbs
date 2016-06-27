@@ -12,7 +12,7 @@
           <section class="post-content">
             <header class="post-header">
               <h4 class="post-title">{{title}}</h4>
-              <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
+              <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MM YYYY"}}</time>
             </header>
 
             {{content}}
@@ -20,7 +20,7 @@
 
           <footer class="post-footer">
               <section class="share">
-                  <h6>Share this on:</h6>
+                  <h6>Compártelo en:</h6>
                   <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
                       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                       <span class="hidden">Twitter</span>
