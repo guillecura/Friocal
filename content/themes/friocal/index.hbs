@@ -19,56 +19,50 @@
 <main id="content" class="content" role="main">
 
   {{#get "posts" filter="featured:true" order="published_at desc" include="tags" as |about|}}
-    {{#foreach about}}
-      {{#has tag="about-us"}}
-        <article class="{{post_class}}">
-          <header class="post-header">
-            <h2 class="post-title">{{title}}</h2>
-          </header>
+    {{#foreach about}}{{#has tag="about-us"}}
+      <article class="{{post_class}}">
+        <header class="post-header">
+          <h2 class="post-title">{{title}}</h2>
+        </header>
 
-          <section class="post-content">
-            <p>{{content}}</p>
-          </section>
-        </article>
-      {{/has}}
-    {{/foreach}}
+        <section class="post-content">
+          <p>{{content}}</p>
+        </section>
+      </article>
+    {{/has}}{{/foreach}}
   {{/get}}
 
   {{#get "posts" order="published_at asc" include="tags" as |post|}}
     <article class="tag-brand">
       <h2>Nuestras Marcas</h2>
 
-      {{#foreach post}}
-        {{#has tag="brand"}}
-          <figure class="case-study {{post_class}}">
-            <a href="{{@blog.url}}/tag/brands#{{slug}}"{{#if image}}style="background-image: url('{{image}}');"{{/if}}>
-              {{#if image}}
-                <img src="{{image}}" alt="{{title}}">
-              {{else}}
-                <h3>{{title}}</h3>
-              {{/if}}
-            </a>
-          </figure>
-        {{/has}}
-      {{/foreach}}
+      {{#foreach post}}{{#has tag="brand"}}
+        <figure class="case-study {{post_class}}">
+          <a href="{{@blog.url}}/tag/brands#{{slug}}"{{#if image}}style="background-image: url('{{image}}');"{{/if}}>
+            {{#if image}}
+              <img src="{{image}}" alt="{{title}}">
+            {{else}}
+              <h3>{{title}}</h3>
+            {{/if}}
+          </a>
+        </figure>
+      {{/has}}{{/foreach}}
     </article>
 
     <article class="tag-business">
       <h2>Empresas Asociadas</h2>
 
-      {{#foreach post}}
-        {{#has tag="business"}}
-          <figure class="case-study {{post_class}}">
-            <a href="{{@blog.url}}/tag/brands#{{slug}}"{{#if image}}style="background-image: url('{{image}}');"{{/if}}>
-              {{#if image}}
-                <img src="{{image}}" alt="{{title}}">
-              {{else}}
-                <h3>{{title}}</h3>
-              {{/if}}
-            </a>
-          </figure>
-        {{/has}}
-      {{/foreach}}
+      {{#foreach post}}{{#has tag="company"}}
+        <figure class="case-study {{post_class}}">
+          <a href="{{@blog.url}}/tag/brands#{{slug}}"{{#if image}}style="background-image: url('{{image}}');"{{/if}}>
+            {{#if image}}
+              <img src="{{image}}" alt="{{title}}">
+            {{else}}
+              <h3>{{title}}</h3>
+            {{/if}}
+          </a>
+        </figure>
+      {{/has}}{{/foreach}}
     </article>
   {{/get}}
 
