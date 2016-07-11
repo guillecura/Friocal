@@ -1,0 +1,29 @@
+// =============================================================================
+// CONTACT PAGE STYLES
+// =============================================================================
+
+
+// General
+// -----------------------------------------------------------------------------
+.page-template {
+  .main-header {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: $tag-head * 2;
+    min-height: $logo;
+    position: relative;
+    width: 100%;
+  }
+
+  .content {
+    animation: op-in .999s ease-out forwards; // Opacity In animation
+    min-height: $contact-height;
+    padding: $distance * 1.5 0;
+
+    @include mq(mobile) {
+      padding-top: 0;
+    }
+  }
+}
+// -----------------------------------------------------------------------------

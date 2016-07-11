@@ -888,6 +888,23 @@ h6 {
         display: block;
         font-size: 0.85rem; }
 
+.page-template .main-header {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  min-height: 180px;
+  position: relative;
+  width: 100%; }
+
+.page-template .content {
+  animation: op-in .999s ease-out forwards;
+  min-height: calc(100vh - 20vh - 290px);
+  padding: 15px 0; }
+  @media (max-width: 640px) {
+    .page-template .content {
+      padding-top: 0; } }
+
 .content {
   animation: op-in .999s ease-out forwards;
   min-height: 0;
