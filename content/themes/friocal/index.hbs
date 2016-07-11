@@ -34,12 +34,30 @@
     {{/foreach}}
   {{/get}}
 
-  {{#get "posts" order="published_at asc" include="tags" as |brand|}}
+  {{#get "posts" order="published_at asc" include="tags" as |post|}}
     <article class="tag-brand">
       <h2>Nuestras Marcas</h2>
 
-      {{#foreach brand}}
+      {{#foreach post}}
         {{#has tag="brand"}}
+          <figure class="case-study {{post_class}}">
+            <a href="{{@blog.url}}/tag/brands#{{slug}}"{{#if image}}style="background-image: url('{{image}}');"{{/if}}>
+              {{#if image}}
+                <img src="{{image}}" alt="{{title}}">
+              {{else}}
+                <h3>{{title}}</h3>
+              {{/if}}
+            </a>
+          </figure>
+        {{/has}}
+      {{/foreach}}
+    </article>
+
+    <article class="tag-business">
+      <h2>Empresas Asociadas</h2>
+
+      {{#foreach post}}
+        {{#has tag="business"}}
           <figure class="case-study {{post_class}}">
             <a href="{{@blog.url}}/tag/brands#{{slug}}"{{#if image}}style="background-image: url('{{image}}');"{{/if}}>
               {{#if image}}

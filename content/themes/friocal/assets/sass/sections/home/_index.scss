@@ -6,7 +6,8 @@
 // General
 // -----------------------------------------------------------------------------
 .tag-about-us,
-.tag-brand {
+.tag-brand,
+.tag-business {
   padding: $distance * 6 $distance * 3 $distance * 3;
 
   @include mq(desktop) {

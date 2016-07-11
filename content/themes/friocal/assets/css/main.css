@@ -818,28 +818,35 @@ h6 {
     opacity: 1; }
 
 .tag-about-us,
-.tag-brand {
+.tag-brand,
+.tag-business {
   padding: 60px 30px 30px; }
   @media (max-width: 1024px) {
     .tag-about-us > h2,
-    .tag-brand > h2 {
+    .tag-brand > h2,
+    .tag-business > h2 {
       padding: 0 15px; } }
   @media (max-width: 854px) {
     .tag-about-us,
-    .tag-brand {
+    .tag-brand,
+    .tag-business {
       padding-left: 0;
       padding-right: 0; } }
   .tag-about-us .post-header,
   .tag-about-us .post-content,
   .tag-brand .post-header,
-  .tag-brand .post-content {
+  .tag-brand .post-content,
+  .tag-business .post-header,
+  .tag-business .post-content {
     margin: 0;
     max-width: 720px; }
     @media (max-width: 1024px) {
       .tag-about-us .post-header,
       .tag-about-us .post-content,
       .tag-brand .post-header,
-      .tag-brand .post-content {
+      .tag-brand .post-content,
+      .tag-business .post-header,
+      .tag-business .post-content {
         padding: 0 15px; } }
 
 .tag-brand {
