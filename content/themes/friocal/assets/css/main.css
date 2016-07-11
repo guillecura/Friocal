@@ -891,38 +891,32 @@ h6 {
 .post-template.tag-product {
   padding-top: 80px; }
   .post-template.tag-product .content {
-    background-color: #0a0f19;
-    max-width: 100%; }
-  .post-template.tag-product .post-head.main-header {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: calc(100vh - 230px);
-    width: 100%; }
-    .post-template.tag-product .post-head.main-header > img {
-      height: 0;
-      width: 0; }
-  .post-template.tag-product .image-description {
-    color: white;
-    padding: 15px;
-    max-width: 1024px; }
-    .post-template.tag-product .image-description .post-content,
-    .post-template.tag-product .image-description .post-footer {
+    min-height: calc(100vh - 150px);
+    position: relative; }
+    .post-template.tag-product .content > figure {
       display: inline-block;
       margin-right: -5px;
       vertical-align: top;
-      padding: 30px 15px; }
-      .post-template.tag-product .image-description .post-content h4,
-      .post-template.tag-product .image-description .post-footer h4 {
-        line-height: 1.11em; }
-    .post-template.tag-product .image-description .post-content {
-      width: calc(100% - 150px); }
-    .post-template.tag-product .image-description .post-footer {
-      text-align: right;
-      width: 150px; }
-      .post-template.tag-product .image-description .post-footer a {
-        display: block;
-        font-size: 0.85rem; }
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 675.84px;
+      width: 100%; }
+  .post-template.tag-product .post-content,
+  .post-template.tag-product .post-footer {
+    padding: 30px 15px;
+    width: 100%; }
+    .post-template.tag-product .post-content h4,
+    .post-template.tag-product .post-footer h4 {
+      line-height: 2.22em; }
+  .post-template.tag-product .post-footer {
+    max-width: 100%;
+    text-align: right; }
+    .post-template.tag-product .post-footer h6 {
+      line-height: 1.11em; }
+    .post-template.tag-product .post-footer a {
+      display: inline-block;
+      font-size: 0.85rem;
+      margin-left: 5px; }
 
 .page-template .main-header {
   background-position: center;
