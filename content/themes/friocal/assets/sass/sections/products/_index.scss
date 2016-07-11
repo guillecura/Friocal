@@ -24,6 +24,59 @@
     @include mq(mobile) {
       padding-top: 0;
     }
+
+    .post-content {
+      a {
+        color: $secondary;
+        display: block;
+        font-size: $fh4;
+        padding: $distance;
+        line-height: $line-height;
+        transition: all 150ms;
+
+        &:hover {
+          border-left: $border * 2 solid $primary;
+        }
+      }
+
+      p {
+        border: 1px solid $smoke-dark;
+        color: $secondary;
+        display: block;
+        font-size: $fh4;
+        line-height: $line-height;
+
+        em {
+          border-bottom: 1px solid $white;
+          display: block;
+          font-style: normal;
+          margin-bottom: -1px;
+          padding: $distance;
+        }
+
+        + ul {
+          border-top: 0;
+        }
+      }
+
+      li {
+        list-style: none;
+
+        a {
+          padding-left: $distance * 4;
+        }
+      }
+
+      ul {
+        border: 1px solid $smoke-dark;
+        display: block;
+        padding: 0;
+
+        + p {
+          margin-top: $distance * 2;
+        }
+      }
+    }
   }
 }
 // -----------------------------------------------------------------------------
