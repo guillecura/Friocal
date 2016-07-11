@@ -32,15 +32,15 @@
     {{/has}}{{/foreach}}
   {{/get}}
 
-  {{#get "posts" order="published_at asc" include="tags" as |post|}}
+  {{#get "posts" order="published_at asc" include="tags" as |brand|}}
     <article class="tag-brand">
       <h2>Nuestras Marcas</h2>
 
-      {{#foreach post}}{{#has tag="brand"}}
+      {{#foreach brand}}{{#has tag="brand"}}
         <figure class="case-study {{post_class}}">
           <a href="{{@blog.url}}/tag/brands#{{slug}}"{{#if image}}style="background-image: url('{{image}}');"{{/if}}>
             {{#if image}}
-              <img src="{{image}}" alt="{{title}}">
+              <img src="{{image}}" alt="{{title}}" width="0" height="0">
             {{else}}
               <h3>{{title}}</h3>
             {{/if}}
@@ -48,19 +48,19 @@
         </figure>
       {{/has}}{{/foreach}}
     </article>
+  {{/get}}
 
+  {{#get "posts" filter="featured:true" order="published_at asc" include="tags" as |company|}}
     <article class="tag-business">
       <h2>Empresas Asociadas</h2>
 
-      {{#foreach post}}{{#has tag="company"}}
-        <figure class="case-study {{post_class}}">
-          <a href="{{@blog.url}}/tag/brands#{{slug}}"{{#if image}}style="background-image: url('{{image}}');"{{/if}}>
-            {{#if image}}
-              <img src="{{image}}" alt="{{title}}">
-            {{else}}
-              <h3>{{title}}</h3>
-            {{/if}}
-          </a>
+      {{#foreach company}}{{#has tag="company"}}
+        <figure class="case-study {{post_class}}"{{#if image}} style="background-image: url('{{image}}');"{{/if}}>
+          {{#if image}}
+            <img src="{{image}}" alt="{{title}}" width="0" height="0">
+          {{else}}
+            <h3>{{title}}</h3>
+          {{/if}}
         </figure>
       {{/has}}{{/foreach}}
     </article>

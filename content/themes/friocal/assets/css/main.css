@@ -117,9 +117,27 @@ body {
     width: 100%; }
     .case-study > a:hover {
       transform: scale(0.95); }
-  .case-study img {
-    height: 0;
-    width: 0; }
+
+.tag-business .case-study {
+  display: inline-block;
+  margin-right: -5px;
+  vertical-align: top;
+  animation: blured-out .999s ease-out forwards;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 192px;
+  margin: 5px;
+  max-height: 223.5px;
+  max-width: 223.5px;
+  position: relative;
+  width: 256px; }
+  @media (max-width: 854px) {
+    .tag-business .case-study {
+      height: calc(50vw - 30px);
+      max-height: calc(50vw - 30px);
+      max-width: calc(50vw - 30px);
+      width: calc(50vw - 30px); } }
 
 .tag-template .post.tag-brands {
   border-left: 6px solid transparent;

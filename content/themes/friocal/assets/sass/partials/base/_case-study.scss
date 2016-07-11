@@ -35,10 +35,30 @@
       transform: scale(.95);
     }
   }
+}
+// -----------------------------------------------------------------------------
 
-  img {
-    height: 0;
-    width: 0;
+
+// Tag Business
+// -----------------------------------------------------------------------------
+.tag-business .case-study {
+  @include inline-block;
+  animation: blured-out .999s ease-out forwards; // Blur out animation
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: $case-size * .75;
+  margin: $distance / 2;
+  max-height: #{(($site-box - $distance * 5) / 4) - $distance * 2};
+  max-width: #{(($site-box - $distance * 5) / 4) - $distance * 2};
+  position: relative;
+  width: $case-size;
+
+  @include mq(hybrid) {
+    height: $m-case-size;
+    max-height: calc(50vw - #{$distance * 3});
+    max-width: calc(50vw - #{$distance * 3});
+    width: $m-case-size;
   }
 }
 // -----------------------------------------------------------------------------
