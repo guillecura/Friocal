@@ -61,6 +61,7 @@
 
 .flex-caption {
   @include vertical-center;
+  animation: op-in 1500ms ease-out forwards; // Slide In animation
   color: $white;
   font-family: $secondary-font;
   font-size: $fh1;

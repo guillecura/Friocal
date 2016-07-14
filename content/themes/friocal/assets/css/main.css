@@ -238,6 +238,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  animation: op-in 1500ms ease-out forwards;
   color: white;
   font-family: "Georgia", sans-serif;
   font-size: 3rem;
