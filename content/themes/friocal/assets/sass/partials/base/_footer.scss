@@ -93,25 +93,6 @@
 // -----------------------------------------------------------------------------
 
 
-// Language
-// -----------------------------------------------------------------------------
-  .language {
-    color: $secondary-dark;
-    display: block;
-    font-size: $fsmall;
-    position: absolute;
-    right: $distance;
-    text-align: center;
-    top: $distance * 9;
-
-    @include mq(mobile) {
-      margin: $distance auto $distance * 3;
-      position: static;
-    }
-  }
-//------------------------------------------------------------------------------
-
-
 // Copyright
 // -----------------------------------------------------------------------------
   .copyright {
