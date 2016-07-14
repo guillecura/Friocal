@@ -107,7 +107,7 @@ body {
       max-height: calc(50vw - 30px);
       max-width: calc(50vw - 30px);
       width: calc(50vw - 30px); } }
-  .case-study > a {
+  .case-study:not(.view-pdf) > a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 75%;
@@ -115,7 +115,7 @@ body {
     height: 100%;
     transition: transform 150ms;
     width: 100%; }
-    .case-study > a:hover {
+    .case-study:not(.view-pdf) > a:hover {
       transform: scale(0.95); }
 
 .tag-business .case-study {
@@ -123,14 +123,15 @@ body {
   margin-right: -5px;
   vertical-align: top;
   animation: blured-out .999s ease-out forwards;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   background-size: contain;
-  height: 192px;
+  height: 212px;
   margin: 5px;
-  max-height: 223.5px;
+  max-height: 243.5px;
   max-width: 223.5px;
   position: relative;
+  text-align: center;
   width: 256px; }
   @media (max-width: 854px) {
     .tag-business .case-study {
@@ -138,6 +139,28 @@ body {
       max-height: calc(50vw - 30px);
       max-width: calc(50vw - 30px);
       width: calc(50vw - 30px); } }
+  .tag-business .case-study > a {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("../img/icon-pdf.svg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 64px;
+    display: block;
+    font-size: 0.85rem;
+    padding: 15px;
+    padding-top: 74px;
+    width: 100%; }
+    .tag-business .case-study > a:hover {
+      text-decoration: underline; }
+  .tag-business .case-study > h6 {
+    color: #7c8d9a;
+    line-height: 20px;
+    position: absolute;
+    text-align: center;
+    top: 183.5px;
+    width: 100%; }
 
 .tag-template .post.tag-brands {
   border-left: 6px solid transparent;

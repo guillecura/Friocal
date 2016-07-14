@@ -22,7 +22,7 @@
     width: $m-case-size;
   }
 
-  > a {
+  &:not(.view-pdf) > a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 75%;
@@ -44,14 +44,15 @@
 .tag-business .case-study {
   @include inline-block;
   animation: blured-out .999s ease-out forwards; // Blur out animation
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   background-size: contain;
-  height: $case-size * .75;
+  height: $case-size * .75 + $distance * 2;
   margin: $distance / 2;
-  max-height: #{(($site-box - $distance * 5) / 4) - $distance * 2};
+  max-height: #{(($site-box - $distance * 5) / 4)};
   max-width: #{(($site-box - $distance * 5) / 4) - $distance * 2};
   position: relative;
+  text-align: center;
   width: $case-size;
 
   @include mq(hybrid) {
@@ -59,6 +60,32 @@
     max-height: calc(50vw - #{$distance * 3});
     max-width: calc(50vw - #{$distance * 3});
     width: $m-case-size;
+  }
+
+  > a {
+    @include vertical-center;
+    background-image: url('../img/icon-pdf.svg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: $icon * 2;
+    display: block;
+    font-size: $fsmall;
+    padding: $distance * 1.5;
+    padding-top: $icon * 2 + $distance;
+    width: 100%;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  > h6 {
+    color: $gray-dark;
+    line-height: $distance * 2;
+    position: absolute;
+    text-align: center;
+    top: #{(($site-box - $distance * 5) / 4) - $distance * 6};
+    width: 100%;
   }
 }
 // -----------------------------------------------------------------------------

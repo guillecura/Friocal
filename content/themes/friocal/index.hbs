@@ -52,17 +52,22 @@
 
   {{#get "posts" filter="featured:true" order="published_at asc" include="tags" as |company|}}
     <article class="tag-business">
-      <h2>Empresas Asociadas</h2>
+      <h2>Empresas con las que trabajamos</h2>
 
       {{#foreach company}}{{#has tag="company"}}
         <figure class="case-study {{post_class}}"{{#if image}} style="background-image: url('{{image}}');"{{/if}}>
           {{#if image}}
             <img src="{{image}}" alt="{{title}}" width="0" height="0">
+            <h6>{{title}}</h6>
           {{else}}
             <h3>{{title}}</h3>
           {{/if}}
         </figure>
       {{/has}}{{/foreach}}
+
+      <figure class="case-study view-pdf">
+        <a href="">Ver listado completo</a>
+      </figure>
     </article>
   {{/get}}
 
