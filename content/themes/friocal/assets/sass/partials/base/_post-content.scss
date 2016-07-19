@@ -87,6 +87,15 @@
       margin-bottom: $distance * 1.5;
     }
   }
+
+  .divided > * {
+    @include inline-block;
+    max-width: calc(50% - #{$distance / 2});
+
+    &:nth-child(2) {
+      margin-left: $distance;
+    }
+  }
 // -----------------------------------------------------------------------------
 
 
