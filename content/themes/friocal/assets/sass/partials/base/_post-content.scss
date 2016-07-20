@@ -90,11 +90,11 @@
 
   .divided > * {
     @include inline-block;
-    max-width: calc(50% - #{$distance / 2});
+    max-width: calc(50% - #{$distance});
     vertical-align: middle;
 
     &:nth-child(2) {
-      margin-left: $distance;
+      margin-left: $distance * 2;
     }
 
     + .divided {
